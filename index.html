@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employ Digitals</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6fb;color:#172033}
+header{background:#101c36;color:white;padding:24px 7%;display:flex;justify-content:space-between;align-items:center}
+header h2{margin:0;color:#64a5ff}
+.hero{text-align:center;padding:65px 20px;background:#172d54;color:white}
+.hero h1{font-size:36px}
+.hero p{color:#d5e3ff;line-height:1.6}
+button{background:#246bdf;color:white;border:0;padding:13px 20px;border-radius:7px;font-weight:bold;cursor:pointer}
+main{max-width:950px;margin:35px auto;padding:15px}
+.panel{background:white;padding:25px;border-radius:12px;margin-bottom:22px;box-shadow:0 3px 15px #0000000c}
+select,input{width:100%;padding:13px;margin:10px 0;border:1px solid #ccd3df;border-radius:7px}
+.note{background:#eaf2ff;padding:14px;border-radius:8px;color:#244879;line-height:1.5}
+footer{text-align:center;padding:25px;background:#101c36;color:white}
+</style>
+</head>
+<body>
+<header>
+<h2>Employ Digitals</h2>
+<span>International Number Services</span>
+</header>
+<section class="hero">
+<h1>Welcome to Employ Digitals</h1>
+<p>Your destination for international phone number services and verification solutions.</p>
+<button onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Explore Services</button>
+</section>
+<main>
+<section class="panel">
+<h2>Our Services</h2>
+<p>Explore international number services for supported countries.</p>
+<div class="note">Availability and pricing will be displayed once our number provider is connected.</div>
+</section>
+<section class="panel" id="order">
+<h2>Choose Your Country</h2>
+<select id="country">
+<option value="">Select a country</option>
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>France</option>
+<option>Germany</option>
+<option>Other Countries</option>
+</select>
+<button onclick="checkCountry()">Continue</button>
+<p id="message"></p>
+</section>
+<section class="panel">
+<h2>Customer Support</h2>
+<p>Need help? Contact our support team for assistance with your order.</p>
+<p>Email: support@employdigitals.com</p>
+</section>
+</main>
+<footer>© 2026 Employ Digitals. All rights reserved.</footer>
+<script>
+function checkCountry(){
+const country=document.getElementById('country').value;
+document.getElementById('message').textContent=country
+?'You selected '+country+'. Number availability is coming soon.'
+:'Please select a country first.';
+}
+</script>
+</body>
+</html>
